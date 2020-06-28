@@ -1,28 +1,39 @@
-/*
-  // Below is what I am expecting to see when I run your program - remove this before submitting your work
-  // 50% of you will not read this and lose 25% of the awardable points.
+console.log("Rhiannon Kimberlin")
+console.log("Assignment 3.4")
+console.log("June 14, 2020")
 
-  FirstName LastName
-  Assignment 3.4
-  Today's Date
+/*Variable Declaration*/
+var var1 = 6;
 
-  -- DO THE NUMBERS MATCH GAME --
-  6 does not match 4!
-  6 does not match 7!
-  6 does not match 4!
-  6 does not match 8!
-  6 does not match 9!
-  6 does not match 7!
-  6 does match 6!
-  6 does not match 3!
-*/
+/*assignment 3.2 import*/
+function match(arg1, arg2) {
+  if (arg1 === arg2) 
+    return true
+  else
+    return false
+}
 
-/**
- * Params: n/a
- * Response: integer value
- * Description: Returns a random integer value
- * Disclaimer: Do not remove this function as this is what you will be using to generate a random number
- */
+function logMismatch(arg1, arg2) {
+  console.log(arg1 + " does not match " + arg2 + "!")
+}
+
+function logMatch(arg1, arg2) {
+  console.log(arg1 + " does match " + arg2 + "!")
+}
+
+/*Provided Function*/
 function randomNumber() {
   return Math.floor((Math.random() * 10) + 1)
 }
+
+/*for loop with 10 iterations*/
+for (let x = 0; x < 10; x++) {
+  var randomNum = (randomNumber());
+    /*if else statement*/
+    if (match(var1, randomNum)) {
+      logMatch(var1, randomNum);
+  }   else {
+    logMismatch(var1, randomNum)
+  }
+  }
+  

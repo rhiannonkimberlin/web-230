@@ -1,26 +1,28 @@
-/*
-============================================
-; Title:  predicates.js
-; Author: Professor Krasso
-; Date:   25 June 2017
-; Description: Demonstrates how to declare and and use JavaScript predicates
-;===========================================
-*/
-
-/**
- * Params: comparable value
- * Response: true/false
- * Description: Returns true/false given the comparision
- */
-function predicate_example(x) {
-  return x > 8
-}
-
-// array of numbers
-let even_numbers = [2, 4, 6, 8, 10]
-
-// call the built-in JavaScript filter function and pass-in the predicate function
-const filtered_numbers = even_numbers.filter(predicate_example)
-
-// output
-console.log(filtered_numbers[0] + ' is greater than 8')
+ 	/* 
+ 	; Title: Discussion Board 4.1 - Arrays
+ 	; Author: Arlix Sorto
+ 	; Date: 6/16/2020
+ 	; Modified By:
+ 	; Description: A program with a few of errors.
+ 	 modified by: Rhiannon Kimberlin
+ 	;===========================================
+ 	*/
+ 	 
+ 	 
+ 	//FIXME: Should output a list of colors. 
+ 	//changed {} to [] also while not an error, I fixed some spacing between the words
+ 	var myColors = ["Black", "Blue", "Brown", "Gray", "Green", "Orange", "Purple", "Red", "White", "Yellow"];
+ 	 
+ 	//Validate an array and then loop through an array.
+ 	function displayColors(colors){
+ 	if (Array.isArray(colors)){
+  //removed () after colors.length
+ 	for(var i = 0; i < colors.length; i++){
+ 	//changed {i} to [i]
+  console.log(colors[i]);
+ 	}
+ 	}
+ 	}
+ 	 
+ 	//Calls displayColors function
+ 	displayColors(myColors);
