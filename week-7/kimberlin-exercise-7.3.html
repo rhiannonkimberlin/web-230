@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 7.3</title>
+
+  <!-- you will need to the href to point to your root directories css file -->
+  <link rel="stylesheet" href="./site.css">
+</head>
+<body>
+
+  <h1>SHOPPING LIST v.1</h1>
+  <ol id="items">
+    </ol>
+  <div id="list">
+</div>
+<script>
+  document.getElementById('items').innerHTML =
+  "<li>Oranges</li>" +
+  "<li>Apples</li>" +
+  "<li>Pears</li>" +
+  "<li>Limes</li>" + 
+  "<li>Lemons</li>";
+
+  document.getElementById('list').innerHTML = 
+  "<h1>SHOPPING LIST v.2</H1>" +
+  "<table>" +
+  "<thead>" +
+  "<tr>" +
+  "<th>Id</th>" +
+  "<th>Item</th>" + 
+  "</thead>" +
+  "<tbody>" +
+  "<tr><td>1</td> <td>Oranges</td></tr>" + 
+  "<tr><td>2</td> <td>Apples</td></tr>" + 
+  "<tr><td>3</td> <td>Pears</td></tr>" + 
+  "<tr><td>4</td> <td>Limes</td></tr>" + 
+  "<tr><td>5</td> <td>Lemons</td></tr>" 
+</script>
+
+</body>
+</html>
