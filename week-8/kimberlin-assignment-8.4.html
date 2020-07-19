@@ -1,0 +1,93 @@
+<!--
+============================================
+; Title:  kimberlin-exercise-8.4.html
+; Author: Professor Krasso
+; Date:   19 July 2020
+: Modified by: Rhiannon Kimberlin
+; Description: Putting it all Together
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 8.4</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <style type="text/css">
+    tbody tr:hover {
+      cursor: pointer;
+      background-color: #ffff99;
+    }
+  </style>
+</head>
+<body>
+
+<div id="emps"></div>
+
+<script type="text/javascript">
+
+  // jQuery onClick event
+  // Don't remove this, just add your code to the body of the event (curly braces)
+  $(function () {
+    $("table tr").click(function () {
+      var employeeId = parseInt($(this).find("td:first").html());
+      getEmployee(employeeId)
+    })
+  });
+
+  function employee(id, first, last, title) {
+    this.idNumber = id;
+    this.firstName = first;
+    this.lastName = last;
+    this.title = title;
+  };
+
+  var employees = [
+    new employee(1, "Regina", "Lockwood", "Headmaster"),
+    new employee(2, "Vaughn", "Savage", "Vice-Principal"),
+    new employee(3, "Finnick", "Mateus", "Teacher"),
+    new employee(4, "Phoenix", "Charles", "Teacher's Assistant"),
+    new employee(5, "Archer", "Pierce", "Teacher")
+  ];
+
+  function getEmployee(id) {
+    for (var i = 0; i < employees.length; i++) {
+      if ( id === employees[i].idNumber) {
+        alert (employees[i].idNumber + " " + 
+        employees[i].firstName + " " + 
+        employees[i].lastName + " " + 
+        employees[i].title);
+      }
+    }
+  };
+
+  var output = "<table>" + 
+                  '<thead>'+
+                    "<tr>" +
+                      "<th>ID</th>" + 
+                      "<th>First Name</th>" + 
+                      "<th>Last Name</th>" + 
+                      "<th>Title</th>" + 
+                    "</tr>" +
+                  "</thead>" +
+                  "<tbody>" + "</tbody>"
+                "</table>";
+  
+  document.getElementById('emps').innerHTML = output;
+
+  for (var x = 0; x < employees.length; x++) {
+    var employeeInformation = "<tr>" + 
+                                "<td>" + employees[x].idNumber + "</td>" +
+                                "<td>" + employees[x].firstName + "</td>" +
+                                "<td>" + employees[x].lastName + "</td>" +
+                                "<td>" + employees[x].title + "</td>" +
+                              "</tr>";
+      $('tbody').append(employeeInformation);
+                              };
+                      
+</script>
+</body>
+</html>
